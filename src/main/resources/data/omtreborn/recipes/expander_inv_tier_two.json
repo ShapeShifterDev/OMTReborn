@@ -1,0 +1,11 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["ABA", "DCD", "ADA"],
+  "key": {
+    "A": {"tag": "forge:ingots/iron"},
+    "B": {"item": "omtreborn:expander"},
+    "C": {"item": "minecraft:chest"},
+    "D": {"item": "omtreborn:io_bus"}
+  },
+  "result": {"item": "omtreborn:expander", "nbt": "{expander_type: 6}"}
+}

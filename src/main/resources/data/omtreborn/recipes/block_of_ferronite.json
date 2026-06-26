@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["FFF", "FFF", "FFF"],
+  "key": {"F": {"item": "omtreborn:ferronite_ingot"}},
+  "result": {"item": "omtreborn:block_of_ferronite"}
+}

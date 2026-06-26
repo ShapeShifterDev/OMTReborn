@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["SFS", "IBI", "SFS"],
+  "key": {
+    "S": {"item": "minecraft:stone"},
+    "F": {"item": "omtreborn:ferronite_ingot"},
+    "I": {"item": "minecraft:iron_ingot"},
+    "B": {"item": "omtreborn:io_bus"}
+  },
+  "result": {"item": "omtreborn:turret_base", "nbt": "{tier: 2, CustomModelData: 2}"}
+}

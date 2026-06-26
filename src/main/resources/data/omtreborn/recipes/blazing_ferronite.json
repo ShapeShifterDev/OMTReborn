@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "omtreborn:ferronite_ingot"},
+    {"item": "minecraft:blaze_rod"}
+  ],
+  "result": {"item": "omtreborn:blazing_ferronite"}
+}

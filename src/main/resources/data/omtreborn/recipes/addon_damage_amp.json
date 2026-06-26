@@ -1,0 +1,11 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["ABA", "BCD", "ABA"],
+  "key": {
+    "A": {"tag": "forge:ingots/iron"},
+    "B": {"tag": "forge:gems/quartz"},
+    "C": {"item": "minecraft:chest"},
+    "D": {"item": "omtreborn:io_bus"}
+  },
+  "result": {"item": "omtreborn:addon_damage_amp"}
+}

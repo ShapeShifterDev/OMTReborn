@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["GBG", "OFO", "SCS"],
+  "key": {
+    "G": {"tag": "forge:glass"},
+    "B": {"item": "omtreborn:io_bus"},
+    "O": {"item": "minecraft:gold_ingot"},
+    "F": {"item": "omtreborn:ferronite_ingot"},
+    "S": {"item": "minecraft:smooth_stone"},
+    "C": {"item": "omtreborn:block_of_ferronite"}
+  },
+  "result": {"item": "omtreborn:sensor_tier_three"}
+}

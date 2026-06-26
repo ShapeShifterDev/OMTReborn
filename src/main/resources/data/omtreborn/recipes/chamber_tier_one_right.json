@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [" CP", " D ", " CP"],
+  "key": {
+    "C": {"item": "minecraft:cobblestone"},
+    "P": {"tag": "minecraft:planks"},
+    "D": {"item": "minecraft:dispenser"}
+  },
+  "result": {"item": "omtreborn:chamber_tier_one"}
+}

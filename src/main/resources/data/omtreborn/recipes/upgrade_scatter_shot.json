@@ -1,0 +1,10 @@
+﻿{
+  "result": {"item": "omtreborn:upgrade_scatter_shot"},
+  "pattern": [" A ", "ABA", " C "],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {"tag":"forge:gems/quartz"},
+    "B": {"item":"minecraft:flint"},
+    "C": {"item":"omtreborn:io_bus"}
+  }
+}

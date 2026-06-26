@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=north": {"model": "omtreborn:block/expander", "y": 180},
+    "facing=south": {"model": "omtreborn:block/expander"},
+    "facing=east":  {"model": "omtreborn:block/expander", "y": 270},
+    "facing=west":  {"model": "omtreborn:block/expander", "y": 90},
+    "facing=up":    {"model": "omtreborn:block/expander", "x": 90},
+    "facing=down":  {"model": "omtreborn:block/expander", "x": 270}
+  }
+}

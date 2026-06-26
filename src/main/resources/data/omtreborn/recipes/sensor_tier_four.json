@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["GBG", "DLD", "QCQ"],
+  "key": {
+    "G": {"tag": "forge:glass"},
+    "B": {"item": "omtreborn:io_bus"},
+    "D": {"item": "minecraft:diamond"},
+    "L": {"item": "omtreborn:ferronite_lens"},
+    "Q": {"item": "minecraft:quartz_block"},
+    "C": {"item": "omtreborn:block_of_ferronite"}
+  },
+  "result": {"item": "omtreborn:sensor_tier_four"}
+}

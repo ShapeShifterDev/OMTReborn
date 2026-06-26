@@ -1,0 +1,9 @@
+{
+  "parent": "omtreborn:block/turret_base_tier_one",
+  "overrides": [
+    {"predicate": {"custom_model_data": 2}, "model": "omtreborn:block/turret_base_tier_two"},
+    {"predicate": {"custom_model_data": 3}, "model": "omtreborn:block/turret_base_tier_three"},
+    {"predicate": {"custom_model_data": 4}, "model": "omtreborn:block/turret_base_tier_four"},
+    {"predicate": {"custom_model_data": 5}, "model": "omtreborn:block/turret_base_tier_five"}
+  ]
+}

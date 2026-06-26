@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["GTG", "DCD", "DBD"],
+  "key": {
+    "G": {"item": "minecraft:glowstone"},
+    "T": {"item": "omtreborn:sensor_tier_four"},
+    "D": {"item": "minecraft:deepslate"},
+    "C": {"item": "omtreborn:chamber_tier_four"},
+    "B": {"item": "minecraft:brewing_stand"}
+  },
+  "result": {"item": "omtreborn:relativistic_turret"}
+}

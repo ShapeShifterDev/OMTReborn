@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [" T ", "HCA", "SSS"],
+  "key": {
+    "T": {"item": "omtreborn:sensor_tier_two"},
+    "H": {"item": "minecraft:hopper"},
+    "C": {"item": "omtreborn:chamber_tier_two"},
+    "A": {"item": "omtreborn:barrel_tier_two"},
+    "S": {"item": "minecraft:stone"}
+  },
+  "result": {"item": "omtreborn:machine_gun_turret"}
+}

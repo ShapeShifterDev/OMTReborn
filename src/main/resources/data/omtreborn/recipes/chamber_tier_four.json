@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["DD ", "CB ", "DD "],
+  "key": {
+    "D": {"item": "minecraft:deepslate"},
+    "C": {"item": "omtreborn:ferronite_coil"},
+    "B": {"item": "omtreborn:io_bus"}
+  },
+  "result": {"item": "omtreborn:chamber_tier_four"}
+}

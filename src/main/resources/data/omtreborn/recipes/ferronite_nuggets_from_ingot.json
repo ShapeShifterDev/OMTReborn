@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{"item": "omtreborn:ferronite_ingot"}],
+  "result": {"item": "omtreborn:ferronite_nugget", "count": 9}
+}

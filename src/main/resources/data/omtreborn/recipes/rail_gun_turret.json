@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["OT ", "ECA", "OFO"],
+  "key": {
+    "O": {"item": "minecraft:obsidian"},
+    "T": {"item": "omtreborn:sensor_tier_five"},
+    "E": {"item": "minecraft:end_crystal"},
+    "C": {"item": "omtreborn:chamber_tier_five"},
+    "A": {"item": "omtreborn:barrel_tier_five"},
+    "F": {"item": "omtreborn:ferronite_frame"}
+  },
+  "result": {"item": "omtreborn:rail_gun_turret"}
+}

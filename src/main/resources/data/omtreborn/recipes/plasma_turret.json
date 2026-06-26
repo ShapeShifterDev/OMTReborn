@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["OTL", "NCA", "OFO"],
+  "key": {
+    "O": {"item": "minecraft:obsidian"},
+    "T": {"item": "omtreborn:sensor_tier_five"},
+    "L": {"item": "omtreborn:ferronite_lens"},
+    "N": {"item": "minecraft:nether_star"},
+    "C": {"item": "omtreborn:chamber_tier_five"},
+    "A": {"item": "omtreborn:barrel_tier_five"},
+    "F": {"item": "omtreborn:ferronite_frame"}
+  },
+  "result": {"item": "omtreborn:plasma_turret"}
+}

@@ -1,0 +1,11 @@
+﻿{
+  "result": {"item": "omtreborn:addon_fake_drops"},
+  "pattern": ["CAC", "ABD", "CAC"],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {"tag":"forge:storage_blocks/lapis"},
+    "B": {"item":"minecraft:ender_eye"},
+    "C": {"tag":"forge:gems/quartz"},
+    "D": {"item":"omtreborn:io_bus"}
+  }
+}

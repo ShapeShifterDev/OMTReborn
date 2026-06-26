@@ -1,0 +1,13 @@
+{
+  "values": [
+    "omtreborn:machine_gun_turret",
+    "omtreborn:incendiary_turret",
+    "omtreborn:grenade_turret",
+    "omtreborn:relativistic_turret",
+    "omtreborn:rocket_turret",
+    "omtreborn:teleporter_turret",
+    "omtreborn:ferronite_ore",
+    "omtreborn:deepslate_ferronite_ore",
+    "omtreborn:block_of_ferronite"
+  ]
+}

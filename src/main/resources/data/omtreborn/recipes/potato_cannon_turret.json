@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [" S ", "PHA", "CCC"],
+  "key": {
+    "S": {"item": "omtreborn:sensor_tier_one"},
+    "P": {"item": "minecraft:composter"},
+    "H": {"item": "omtreborn:chamber_tier_one"},
+    "A": {"item": "omtreborn:barrel_tier_one"},
+    "C": {"item": "minecraft:cobblestone"}
+  },
+  "result": {"item": "omtreborn:potato_cannon_turret"}
+}

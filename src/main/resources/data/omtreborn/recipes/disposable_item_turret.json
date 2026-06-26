@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [" S ", "CHA", "CCC"],
+  "key": {
+    "S": {"item": "omtreborn:sensor_tier_one"},
+    "C": {"item": "minecraft:cobblestone"},
+    "H": {"item": "omtreborn:chamber_tier_one"},
+    "A": {"item": "omtreborn:barrel_tier_one"}
+  },
+  "result": {"item": "omtreborn:disposable_item_turret"}
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["NT ", "NCA", "DFD"],
+  "key": {
+    "N": {"item": "minecraft:tnt"},
+    "T": {"item": "omtreborn:sensor_tier_three"},
+    "C": {"item": "omtreborn:chamber_tier_three"},
+    "A": {"item": "omtreborn:barrel_tier_three"},
+    "D": {"item": "minecraft:deepslate"},
+    "F": {"item": "omtreborn:ferronite_frame"}
+  },
+  "result": {"item": "omtreborn:rocket_turret"}
+}

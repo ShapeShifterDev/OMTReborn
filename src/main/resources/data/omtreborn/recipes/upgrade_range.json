@@ -1,0 +1,10 @@
+﻿{
+  "result": {"item": "omtreborn:upgrade_range"},
+  "pattern": [" A ", "ABA", " C "],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {"tag":"forge:gems/quartz"},
+    "B": {"tag":"forge:gems/diamond"},
+    "C": {"item":"omtreborn:io_bus"}
+  }
+}

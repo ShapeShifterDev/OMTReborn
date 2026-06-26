@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["OBO", "CNC", "OBO"],
+  "key": {
+    "O": {"item": "minecraft:obsidian"},
+    "B": {"item": "omtreborn:io_bus"},
+    "C": {"item": "omtreborn:ferronite_coil"},
+    "N": {"item": "omtreborn:nethronite"}
+  },
+  "result": {"item": "omtreborn:turret_base", "nbt": "{tier: 5, CustomModelData: 5}"}
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [" C ", "CFC", " C "],
+  "key": {
+    "C": {"item": "minecraft:copper_ingot"},
+    "F": {"item": "omtreborn:ferronite_ingot"}
+  },
+  "result": {"item": "omtreborn:ferronite_coil", "count": 2}
+}

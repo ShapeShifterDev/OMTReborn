@@ -1,0 +1,10 @@
+﻿{
+  "result": {"item": "omtreborn:upgrade_accuracy"},
+  "pattern": [" A ", "ABA", " C "],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {"tag":"forge:gems/quartz"},
+    "B": {"tag":"forge:ingots/gold"},
+    "C": {"item":"omtreborn:io_bus"}
+  }
+}

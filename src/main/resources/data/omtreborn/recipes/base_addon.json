@@ -1,0 +1,11 @@
+﻿{
+  "result": {"item": "omtreborn:base_addon"},
+  "pattern": ["ABA", "DCD", "ADA"],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {"item":"minecraft:obsidian"},
+    "B": {"tag":"forge:ingots/iron"},
+    "C": {"item":"minecraft:redstone"},
+    "D": {"item":"omtreborn:io_bus"}
+  }
+}

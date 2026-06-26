@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "tier=1": {"model": "omtreborn:block/turret_base_tier_one"},
+    "tier=2": {"model": "omtreborn:block/turret_base_tier_two"},
+    "tier=3": {"model": "omtreborn:block/turret_base_tier_three"},
+    "tier=4": {"model": "omtreborn:block/turret_base_tier_four"},
+    "tier=5": {"model": "omtreborn:block/turret_base_tier_five"}
+  }
+}

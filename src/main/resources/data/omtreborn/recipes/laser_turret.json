@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["OTL", "XCA", "OFO"],
+  "key": {
+    "O": {"item": "minecraft:obsidian"},
+    "T": {"item": "omtreborn:sensor_tier_five"},
+    "L": {"item": "omtreborn:ferronite_lens"},
+    "X": {"item": "minecraft:amethyst_shard"},
+    "C": {"item": "omtreborn:chamber_tier_five"},
+    "A": {"item": "omtreborn:barrel_tier_five"},
+    "F": {"item": "omtreborn:ferronite_frame"}
+  },
+  "result": {"item": "omtreborn:laser_turret"}
+}

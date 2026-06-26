@@ -1,0 +1,11 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["ABA", "DCD", "ADA"],
+  "key": {
+    "A": {"item": "minecraft:cobblestone"},
+    "B": {"tag": "minecraft:planks"},
+    "C": {"item": "minecraft:redstone"},
+    "D": {"item": "omtreborn:io_bus"}
+  },
+  "result": {"item": "omtreborn:expander", "nbt": "{expander_type: 0}"}
+}

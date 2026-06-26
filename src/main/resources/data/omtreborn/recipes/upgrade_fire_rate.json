@@ -1,0 +1,10 @@
+﻿{
+  "result": {"item": "omtreborn:upgrade_fire_rate"},
+  "pattern": [" A ", "ABA", " C "],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {"tag":"forge:gems/quartz"},
+    "B": {"item":"minecraft:blaze_powder"},
+    "C": {"item":"omtreborn:io_bus"}
+  }
+}

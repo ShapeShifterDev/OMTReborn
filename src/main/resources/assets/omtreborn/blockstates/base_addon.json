@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=north": {"model": "omtreborn:block/base_addon", "y": 180},
+    "facing=south": {"model": "omtreborn:block/base_addon"},
+    "facing=east":  {"model": "omtreborn:block/base_addon", "y": 270},
+    "facing=west":  {"model": "omtreborn:block/base_addon", "y": 90},
+    "facing=up":    {"model": "omtreborn:block/base_addon", "x": 90},
+    "facing=down":  {"model": "omtreborn:block/base_addon", "x": 270}
+  }
+}

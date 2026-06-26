@@ -1,0 +1,11 @@
+﻿{
+  "result": {"item": "omtreborn:addon_recycler"},
+  "pattern": ["ABA", "BCD", "ABA"],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {"tag":"forge:ingots/gold"},
+    "B": {"item":"minecraft:magma_cream"},
+    "C": {"item":"minecraft:ender_chest"},
+    "D": {"item":"omtreborn:io_bus"}
+  }
+}

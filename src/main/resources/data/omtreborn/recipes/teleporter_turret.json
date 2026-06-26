@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["ETE", "DCD", "DXD"],
+  "key": {
+    "E": {"item": "minecraft:ender_pearl"},
+    "T": {"item": "omtreborn:sensor_tier_four"},
+    "D": {"item": "minecraft:deepslate"},
+    "C": {"item": "omtreborn:chamber_tier_four"},
+    "X": {"item": "minecraft:ender_chest"}
+  },
+  "result": {"item": "omtreborn:teleporter_turret"}
+}

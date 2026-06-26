@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["GBG", "DND", "OCO"],
+  "key": {
+    "G": {"tag": "forge:glass"},
+    "B": {"item": "omtreborn:io_bus"},
+    "D": {"item": "minecraft:diamond"},
+    "N": {"item": "omtreborn:nethronite"},
+    "O": {"item": "minecraft:obsidian"},
+    "C": {"item": "omtreborn:block_of_ferronite"}
+  },
+  "result": {"item": "omtreborn:sensor_tier_five"}
+}
