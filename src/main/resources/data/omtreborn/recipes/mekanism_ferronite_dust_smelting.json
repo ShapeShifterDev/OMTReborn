@@ -1,0 +1,15 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [{"type": "forge:mod_loaded", "modid": "mekanism"}],
+      "recipe": {
+        "type": "minecraft:smelting",
+        "ingredient": {"item": "mekanism:ferronite_dust"},
+        "result": {"item": "omtreborn:ferronite_ingot"},
+        "experience": 0.7,
+        "cookingtime": 200
+      }
+    }
+  ]
+}

@@ -13,7 +13,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
@@ -25,8 +24,6 @@ import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import omtreborn.config.OMTConfig;
 import omtreborn.init.ModBlockEntities;
@@ -41,16 +38,15 @@ import javax.annotation.Nullable;
 
 public class BlockTurretBase extends OMLTileBlock {
 
-    public static final IntegerProperty TIER = IntegerProperty.create("tier", 1, 5);
+    private final int tier;
 
-    public BlockTurretBase(BlockBehaviour.Properties properties) {
+    public BlockTurretBase(int tier, BlockBehaviour.Properties properties) {
         super(properties);
-        registerDefaultState(stateDefinition.any().setValue(TIER, 1));
+        this.tier = tier;
     }
 
-    @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(TIER);
+    public int getTier() {
+        return tier;
     }
 
     // --- Adjacency helpers used by attachment blocks ---
@@ -74,7 +70,7 @@ public class BlockTurretBase extends OMLTileBlock {
 
     @Override
     public SoundType getSoundType(BlockState state, LevelReader level, BlockPos pos, @Nullable Entity entity) {
-        return switch (state.getValue(TIER)) {
+        return switch (tier) {
             case 1 -> SoundType.WOOD;
             case 5 -> SoundType.DEEPSLATE;
             default -> SoundType.STONE;
@@ -84,7 +80,7 @@ public class BlockTurretBase extends OMLTileBlock {
     @Override
     public float getDestroyProgress(BlockState state, Player player, BlockGetter level, BlockPos pos) {
         if (!OMTConfig.BASES.baseBreakable.get()) return -1.0f;
-        float hardness = state.getValue(TIER) == 5 ? 3.5f : 2.0f;
+        float hardness = tier == 5 ? 3.5f : 2.0f;
         int divisor = player.hasCorrectToolForDrops(state) ? 30 : 100;
         return player.getDestroySpeed(state) / hardness / divisor;
     }
@@ -92,7 +88,7 @@ public class BlockTurretBase extends OMLTileBlock {
     @Override
     public float getExplosionResistance(BlockState state, BlockGetter level, BlockPos pos, Explosion explosion) {
         if (!OMTConfig.BASES.baseBreakable.get()) return Float.MAX_VALUE;
-        return switch (state.getValue(TIER)) {
+        return switch (tier) {
             case 1 -> OMTConfig.BASES.baseTierOne.baseBlastResistance.get().floatValue();
             case 2 -> OMTConfig.BASES.baseTierTwo.baseBlastResistance.get().floatValue();
             case 3 -> OMTConfig.BASES.baseTierThree.baseBlastResistance.get().floatValue();
@@ -111,16 +107,6 @@ public class BlockTurretBase extends OMLTileBlock {
             }
         }
         return true;
-    }
-
-    @Override
-    @Nullable
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
-        ItemStack stack = context.getItemInHand();
-        int tier = (stack.hasTag() && stack.getTag().contains("tier"))
-                ? net.minecraft.util.Mth.clamp(stack.getTag().getInt("tier"), 1, 5)
-                : 1;
-        return defaultBlockState().setValue(TIER, tier);
     }
 
     // --- Interaction ---
@@ -166,7 +152,7 @@ public class BlockTurretBase extends OMLTileBlock {
 
     @Override
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
-        if (state.getValue(TIER) != 1) return;
+        if (tier != 1) return;
         BlockEntity be = level.getBlockEntity(pos);
         if (!(be instanceof TurretBaseBlockEntity base) || !base.isBurning()) return;
 

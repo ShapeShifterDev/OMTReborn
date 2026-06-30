@@ -54,7 +54,7 @@ public abstract class BlockAbstractTurretHead extends OMLTileBlock {
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         BlockState below = level.getBlockState(pos.below());
         if (!(below.getBlock() instanceof BlockTurretBase)) return false;
-        return below.getValue(BlockTurretBase.TIER) >= getMinimumTier();
+        return ((BlockTurretBase) below.getBlock()).getTier() >= getMinimumTier();
     }
 
     public abstract int getMinimumTier();

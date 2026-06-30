@@ -3,6 +3,8 @@ package omtreborn.entity.projectiles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -70,11 +72,16 @@ public class RocketProjectile extends TurretProjectile {
     private void explode() {
         if (isRemoved()) return;
         Level l = level();
-        float strength = OMTConfig.TURRETS.canRocketsDestroyBlocks.get() ? 2.3f : 0.1f;
-        l.explode(null, getX(), getY(), getZ(), strength,
-                OMTConfig.TURRETS.canRocketsDestroyBlocks.get()
-                        ? Level.ExplosionInteraction.BLOCK
-                        : Level.ExplosionInteraction.NONE);
+        if (!(l instanceof ServerLevel sl)) {
+            discard();
+            return;
+        }
+
+        // Lightweight visual/audio effect — skips vanilla block-damage ray-cast entirely
+        sl.sendParticles(ParticleTypes.EXPLOSION, getX(), getY(), getZ(), 1, 0, 0, 0, 0);
+        l.playSound(null, getX(), getY(), getZ(),
+                SoundEvents.GENERIC_EXPLODE, SoundSource.BLOCKS,
+                4.0f, (1.0f + (l.random.nextFloat() - l.random.nextFloat()) * 0.2f) * 0.7f);
 
         AABB aabb = new AABB(getX() - 5, getY() - 5, getZ() - 5,
                              getX() + 5, getY() + 5, getZ() + 5);

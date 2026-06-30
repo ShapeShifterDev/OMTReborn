@@ -29,7 +29,11 @@ public class ModBlockEntities {
     public static final RegistryObject<BlockEntityType<TurretBaseBlockEntity>> TURRET_BASE =
             BLOCK_ENTITIES.register("turret_base",
                     () -> BlockEntityType.Builder.of(TurretBaseBlockEntity::new,
-                            ModBlocks.TURRET_BASE.get()).build(null));
+                            ModBlocks.TURRET_BASE_TIER_1.get(),
+                            ModBlocks.TURRET_BASE_TIER_2.get(),
+                            ModBlocks.TURRET_BASE_TIER_3.get(),
+                            ModBlocks.TURRET_BASE_TIER_4.get(),
+                            ModBlocks.TURRET_BASE_TIER_5.get()).build(null));
 
     public static final RegistryObject<BlockEntityType<ExpanderBlockEntity>> EXPANDER =
             BLOCK_ENTITIES.register("expander",

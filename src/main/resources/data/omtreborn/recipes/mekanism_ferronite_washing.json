@@ -1,0 +1,25 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [{"type": "forge:mod_loaded", "modid": "mekanism"}],
+      "recipe": {
+        "type": "mekanism:washing",
+        "fluidInput": {
+          "amount": 5,
+          "fluid": "minecraft:water"
+        },
+        "chemicalInput": {
+          "amount": 1,
+          "chemicalType": "slurry",
+          "chemical": "mekanism:dirty_ferronite_slurry"
+        },
+        "output": {
+          "amount": 1,
+          "chemicalType": "slurry",
+          "chemical": "mekanism:ferronite_slurry"
+        }
+      }
+    }
+  ]
+}

@@ -10,7 +10,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import omtreborn.OpenModularTurrets;
 import omtreborn.items.ExpanderItem;
-import omtreborn.items.TurretBaseItem;
 
 public class ModCreativeTab {
 
@@ -20,7 +19,7 @@ public class ModCreativeTab {
     public static final RegistryObject<CreativeModeTab> OMT_TAB = CREATIVE_MODE_TABS.register("omtreborn_tab",
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.omtreborn"))
-                    .icon(() -> TurretBaseItem.ofTier(new ItemStack(ModItems.TURRET_BASE_ITEM.get()), 1))
+                    .icon(() -> new ItemStack(ModItems.TURRET_BASE_TIER_1.get()))
                     .build());
 
     public static void register(IEventBus bus) {
@@ -31,11 +30,12 @@ public class ModCreativeTab {
     private static void buildContents(BuildCreativeModeTabContentsEvent event) {
         if (!event.getTabKey().equals(OMT_TAB.getKey())) return;
 
-        // Turret Base: one entry per tier (1-5)
-        ItemStack baseBase = new ItemStack(ModItems.TURRET_BASE_ITEM.get());
-        for (int tier = 1; tier <= 5; tier++) {
-            event.accept(TurretBaseItem.ofTier(baseBase, tier));
-        }
+        // Turret Base: one registered item per tier
+        event.accept(ModItems.TURRET_BASE_TIER_1);
+        event.accept(ModItems.TURRET_BASE_TIER_2);
+        event.accept(ModItems.TURRET_BASE_TIER_3);
+        event.accept(ModItems.TURRET_BASE_TIER_4);
+        event.accept(ModItems.TURRET_BASE_TIER_5);
 
         // Expander: inventory tiers 1-5 (types 5-9) then power tiers 1-5 (types 0-4)
         ItemStack baseExpander = new ItemStack(ModItems.EXPANDER_ITEM.get());
@@ -53,10 +53,10 @@ public class ModCreativeTab {
         event.accept(ModItems.DISPOSABLE_ITEM_TURRET_ITEM);
         event.accept(ModItems.POTATO_CANNON_TURRET_ITEM);
         event.accept(ModItems.MACHINE_GUN_TURRET_ITEM);
-        event.accept(ModItems.INCENDIARY_TURRET_ITEM);
         event.accept(ModItems.GRENADE_TURRET_ITEM);
-        event.accept(ModItems.RELATIVISTIC_TURRET_ITEM);
+        event.accept(ModItems.INCENDIARY_TURRET_ITEM);
         event.accept(ModItems.ROCKET_TURRET_ITEM);
+        event.accept(ModItems.RELATIVISTIC_TURRET_ITEM);
         event.accept(ModItems.TELEPORTER_TURRET_ITEM);
         event.accept(ModItems.LASER_TURRET_ITEM);
         event.accept(ModItems.RAIL_GUN_TURRET_ITEM);
@@ -105,6 +105,8 @@ public class ModCreativeTab {
         event.accept(ModItems.FERRONITE_ORE_ITEM);
         event.accept(ModItems.DEEPSLATE_FERRONITE_ORE_ITEM);
         event.accept(ModItems.BLOCK_OF_FERRONITE_ITEM);
+        event.accept(ModItems.BLOCK_OF_RAW_FERRONITE_ITEM);
+        event.accept(ModItems.BLOCK_OF_NETHRONITE_ITEM);
         event.accept(ModItems.RAW_FERRONITE);
         event.accept(ModItems.FERRONITE_INGOT);
         event.accept(ModItems.FERRONITE_NUGGET);

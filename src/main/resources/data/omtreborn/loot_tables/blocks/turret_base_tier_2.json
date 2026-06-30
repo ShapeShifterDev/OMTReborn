@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:block",
+  "pools": [{
+    "rolls": 1,
+    "conditions": [{"condition": "minecraft:any_of", "terms": [
+      {"condition": "minecraft:match_tool", "predicate": {"enchantments": [{"enchantment": "minecraft:silk_touch", "levels": {"min": 1}}]}},
+      {"condition": "minecraft:match_tool", "predicate": {"tag": "omtreborn:iron_tier_pickaxes"}}
+    ]}],
+    "entries": [{"type": "minecraft:item", "name": "omtreborn:turret_base_tier_2"}]
+  }]
+}

@@ -112,9 +112,25 @@ public class TurretTargetingUtils {
     public static boolean canSeeTargetFromPos(TurretHeadBlockEntity turret, LivingEntity target) {
         if (turret.getLevel() == null) return false;
         BlockPos pos = turret.getBlockPos();
-        // Origin must be outside the turret head block (pos occupies Y to Y+1); start just above it
-        Vec3 origin = new Vec3(pos.getX() + 0.5, pos.getY() + 1.1, pos.getZ() + 0.5);
-        Vec3 targetVec = new Vec3(target.getX(), target.getY() + target.getEyeHeight() * 0.85, target.getZ());
+        double cx = pos.getX() + 0.5;
+        double cy = pos.getY() + 1.1;
+        double cz = pos.getZ() + 0.5;
+
+        // Nudge the origin 0.55 blocks toward the target in XZ. Without this, Minecraft's DDA
+        // ray-cast crosses the top face of the turret head block before exiting its XZ column at
+        // steep downward angles, causing an immediate self-hit and false LOS failure.
+        double dx = target.getX() - cx;
+        double dz = target.getZ() - cz;
+        double hLen = Math.sqrt(dx * dx + dz * dz);
+        Vec3 origin;
+        if (hLen > 0.001) {
+            double nudge = Math.min(0.55, hLen * 0.5);
+            origin = new Vec3(cx + dx / hLen * nudge, cy, cz + dz / hLen * nudge);
+        } else {
+            origin = new Vec3(cx, cy, cz);
+        }
+
+        Vec3 targetVec = new Vec3(target.getX(), target.getEyeY(), target.getZ());
         BlockHitResult result = turret.getLevel().clip(
                 new ClipContext(origin, targetVec, ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, null));
         return result.getType() == HitResult.Type.MISS;

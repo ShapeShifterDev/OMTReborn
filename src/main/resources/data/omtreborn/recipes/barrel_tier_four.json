@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "pattern": ["DDX", "SS ", "DDX"],
   "key": {
-    "D": {"item": "minecraft:deepslate"},
+    "D": {"item": "minecraft:cobbled_deepslate"},
     "X": {"item": "minecraft:diamond"},
-    "S": {"item": "minecraft:cobbled_deepslate_slab"}
+    "S": {"item": "minecraft:quartz_slab"}
   },
   "result": {"item": "omtreborn:barrel_tier_four"}
 }

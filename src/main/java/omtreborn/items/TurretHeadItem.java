@@ -68,7 +68,7 @@ public class TurretHeadItem extends BlockItem {
         BlockPos placePos = context.getClickedPos();
         BlockState below = context.getLevel().getBlockState(placePos.below());
         if (below.getBlock() instanceof BlockTurretBase) {
-            int baseTier = below.getValue(BlockTurretBase.TIER);
+            int baseTier = ((BlockTurretBase) below.getBlock()).getTier();
             int required = ((BlockAbstractTurretHead) getBlock()).getMinimumTier();
             if (baseTier < required) {
                 Player player = context.getPlayer();

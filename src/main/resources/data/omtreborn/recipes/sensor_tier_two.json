@@ -5,7 +5,7 @@
     "G": {"tag": "forge:glass"},
     "I": {"item": "minecraft:iron_ingot"},
     "F": {"item": "omtreborn:ferronite_ingot"},
-    "S": {"item": "minecraft:smooth_stone"}
+    "S": {"item": "minecraft:stone"}
   },
   "result": {"item": "omtreborn:sensor_tier_two"}
 }

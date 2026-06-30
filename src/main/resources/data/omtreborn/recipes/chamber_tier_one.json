@@ -4,7 +4,7 @@
   "key": {
     "C": {"item": "minecraft:cobblestone"},
     "P": {"tag": "minecraft:planks"},
-    "D": {"item": "minecraft:dispenser"}
+    "D": [{"item": "minecraft:bow"}, {"item": "minecraft:crossbow"}]
   },
   "result": {"item": "omtreborn:chamber_tier_one"}
 }

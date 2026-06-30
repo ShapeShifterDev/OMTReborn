@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["RRR", "RRR", "RRR"],
+  "key": {"R": {"item": "omtreborn:raw_ferronite"}},
+  "result": {"item": "omtreborn:block_of_raw_ferronite"}
+}

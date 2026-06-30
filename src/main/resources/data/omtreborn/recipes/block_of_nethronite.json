@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["NNN", "NNN", "NNN"],
+  "key": {"N": {"item": "omtreborn:nethronite"}},
+  "result": {"item": "omtreborn:block_of_nethronite"}
+}

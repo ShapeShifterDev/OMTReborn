@@ -2,8 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "pattern": ["SSF", "ss ", "SSF"],
   "key": {
-    "S": {"item": "minecraft:stone"},
-    "s": {"item": "minecraft:stone_slab"},
+    "S": {"item": "minecraft:cobblestone"},
+    "s": {"item": "minecraft:cobblestone_slab"},
     "F": {"item": "omtreborn:ferronite_ingot"}
   },
   "result": {"item": "omtreborn:barrel_tier_two"}

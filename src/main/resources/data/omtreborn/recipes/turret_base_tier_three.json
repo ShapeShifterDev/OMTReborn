@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "pattern": ["DFD", "GBG", "DCD"],
   "key": {
-    "D": {"item": "minecraft:deepslate"},
+    "D": {"item": "minecraft:cobbled_deepslate"},
     "F": {"item": "omtreborn:ferronite_ingot"},
     "G": {"item": "minecraft:gold_ingot"},
     "B": {"item": "omtreborn:io_bus"},
     "C": {"item": "omtreborn:ferronite_coil"}
   },
-  "result": {"item": "omtreborn:turret_base", "nbt": "{tier: 3, CustomModelData: 3}"}
+  "result": {"item": "omtreborn:turret_base_tier_3"}
 }

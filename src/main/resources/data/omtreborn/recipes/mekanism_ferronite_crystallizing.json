@@ -1,0 +1,19 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [{"type": "forge:mod_loaded", "modid": "mekanism"}],
+      "recipe": {
+        "type": "mekanism:crystallizing",
+        "input": {
+          "amount": 200,
+          "chemicalType": "slurry",
+          "chemical": "mekanism:ferronite_slurry"
+        },
+        "output": {
+          "id": "mekanism:ferronite_crystal"
+        }
+      }
+    }
+  ]
+}

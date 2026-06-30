@@ -18,6 +18,7 @@
   "turret_deploy": { "category": "block", "sounds": [{"name": "omtreborn:turret_deploy", "stream": false}] },
   "turret_retract": { "category": "block", "sounds": [{"name": "omtreborn:turret_retract", "stream": false}] },
   "plasma_launch": { "category": "block", "sounds": [{"name": "omtreborn:plasma_launch", "stream": false}] },
+  "plasma_turret_fire": { "category": "block", "sounds": [{"name": "omtreborn:plasma_turret_fire", "stream": false}] },
   "laser_turret_fire": { "category": "block", "sounds": [{"name": "omtreborn:laser_turret_fire", "stream": false}] },
   "railgun_turret_fire": { "category": "block", "sounds": [{"name": "omtreborn:railgun_turret_fire", "stream": false}] },
   "teleporter_turret_activation": { "category": "block", "sounds": [{"name": "omtreborn:teleporter_turret_activation", "stream": false}] }

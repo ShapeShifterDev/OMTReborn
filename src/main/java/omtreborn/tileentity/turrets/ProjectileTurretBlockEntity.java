@@ -36,7 +36,7 @@ public abstract class ProjectileTurretBlockEntity extends AbstractDirectedTurret
         double speedZ = target instanceof ServerPlayer sp ? targetSpeedZ : target.getZ() - target.zOld;
 
         double d0 = target.getX() - (worldPosition.getX() + 0.5);
-        double d1 = target.getY() + target.getBbHeight() * 0.5 - (worldPosition.getY() + 0.5);
+        double d1 = target.getEyeY() - (worldPosition.getY() + 0.5);
         double d2 = target.getZ() - (worldPosition.getZ() + 0.5);
 
         double dist = Math.sqrt(d0*d0 + d1*d1 + d2*d2);

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [" SS", " F ", " SS"],
   "key": {
-    "S": {"item": "minecraft:stone"},
+    "S": {"item": "minecraft:cobblestone"},
     "F": {"item": "omtreborn:ferronite_coil"}
   },
   "result": {"item": "omtreborn:chamber_tier_two"}

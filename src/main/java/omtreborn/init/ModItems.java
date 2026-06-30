@@ -14,6 +14,7 @@ import omtreborn.items.OMTAddonItem;
 import omtreborn.items.OMTAmmoItem;
 import omtreborn.items.OMTItem;
 import omtreborn.items.OMTUpgradeItem;
+import omtreborn.blocks.BlockTurretBase;
 import omtreborn.items.TurretBaseItem;
 import omtreborn.items.TurretHeadItem;
 
@@ -33,8 +34,11 @@ public class ModItems {
 
     // --- Block items: structural ---
 
-    public static final RegistryObject<Item> TURRET_BASE_ITEM = ITEMS.register("turret_base",
-            () -> new TurretBaseItem(ModBlocks.TURRET_BASE.get(), props()));
+    public static final RegistryObject<Item> TURRET_BASE_TIER_1 = ITEMS.register("turret_base_tier_1", () -> new TurretBaseItem((BlockTurretBase) ModBlocks.TURRET_BASE_TIER_1.get(), props()));
+    public static final RegistryObject<Item> TURRET_BASE_TIER_2 = ITEMS.register("turret_base_tier_2", () -> new TurretBaseItem((BlockTurretBase) ModBlocks.TURRET_BASE_TIER_2.get(), props()));
+    public static final RegistryObject<Item> TURRET_BASE_TIER_3 = ITEMS.register("turret_base_tier_3", () -> new TurretBaseItem((BlockTurretBase) ModBlocks.TURRET_BASE_TIER_3.get(), props()));
+    public static final RegistryObject<Item> TURRET_BASE_TIER_4 = ITEMS.register("turret_base_tier_4", () -> new TurretBaseItem((BlockTurretBase) ModBlocks.TURRET_BASE_TIER_4.get(), props()));
+    public static final RegistryObject<Item> TURRET_BASE_TIER_5 = ITEMS.register("turret_base_tier_5", () -> new TurretBaseItem((BlockTurretBase) ModBlocks.TURRET_BASE_TIER_5.get(), props()));
 
     public static final RegistryObject<Item> EXPANDER_ITEM = ITEMS.register("expander",
             () -> new ExpanderItem(ModBlocks.EXPANDER.get(), props()));
@@ -229,6 +233,12 @@ public class ModItems {
 
     public static final RegistryObject<Item> BLOCK_OF_FERRONITE_ITEM = ITEMS.register("block_of_ferronite",
             () -> new BlockItem(ModBlocks.BLOCK_OF_FERRONITE.get(), props()));
+
+    public static final RegistryObject<Item> BLOCK_OF_RAW_FERRONITE_ITEM = ITEMS.register("block_of_raw_ferronite",
+            () -> new BlockItem(ModBlocks.BLOCK_OF_RAW_FERRONITE.get(), props()));
+
+    public static final RegistryObject<Item> BLOCK_OF_NETHRONITE_ITEM = ITEMS.register("block_of_nethronite",
+            () -> new BlockItem(ModBlocks.BLOCK_OF_NETHRONITE.get(), props()));
 
     // --- Ferronite materials ---
 

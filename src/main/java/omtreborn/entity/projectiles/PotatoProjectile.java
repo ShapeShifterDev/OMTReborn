@@ -1,12 +1,15 @@
 package omtreborn.entity.projectiles;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
@@ -75,6 +78,9 @@ public class PotatoProjectile extends TurretProjectile {
         if (!(entity instanceof Player)) setTagsForTurretHit(entity);
         entity.hurt(OMTDamageSources.normal(l), damage);
         entity.invulnerableTime = 0;
+        if (!ammo.isEmpty() && ammo.is(Items.POISONOUS_POTATO) && entity instanceof LivingEntity le) {
+            le.addEffect(new MobEffectInstance(MobEffects.POISON, 60, 1));
+        }
         if (itemBound != null) itemBound.discard();
         discard();
     }

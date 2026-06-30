@@ -35,8 +35,11 @@ public class ModBlocks {
 
     // --- Structural ---
 
-    public static final RegistryObject<Block> TURRET_BASE = BLOCKS.register("turret_base",
-            () -> new BlockTurretBase(base()));
+    public static final RegistryObject<Block> TURRET_BASE_TIER_1 = BLOCKS.register("turret_base_tier_1", () -> new BlockTurretBase(1, base()));
+    public static final RegistryObject<Block> TURRET_BASE_TIER_2 = BLOCKS.register("turret_base_tier_2", () -> new BlockTurretBase(2, base()));
+    public static final RegistryObject<Block> TURRET_BASE_TIER_3 = BLOCKS.register("turret_base_tier_3", () -> new BlockTurretBase(3, base()));
+    public static final RegistryObject<Block> TURRET_BASE_TIER_4 = BLOCKS.register("turret_base_tier_4", () -> new BlockTurretBase(4, base()));
+    public static final RegistryObject<Block> TURRET_BASE_TIER_5 = BLOCKS.register("turret_base_tier_5", () -> new BlockTurretBase(5, base()));
 
     public static final RegistryObject<Block> EXPANDER = BLOCKS.register("expander",
             () -> new BlockExpander(base().noOcclusion()));
@@ -88,7 +91,13 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of().strength(4.5f, 3.0f).sound(SoundType.DEEPSLATE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> BLOCK_OF_FERRONITE = BLOCKS.register("block_of_ferronite",
-            () -> new Block(BlockBehaviour.Properties.of().strength(5.0f, 6.0f).sound(SoundType.METAL).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.of().strength(5.0f, 6.0f).sound(SoundType.NETHERITE_BLOCK).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> BLOCK_OF_RAW_FERRONITE = BLOCKS.register("block_of_raw_ferronite",
+            () -> new Block(BlockBehaviour.Properties.of().strength(3.5f, 6.0f).sound(SoundType.METAL).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> BLOCK_OF_NETHRONITE = BLOCKS.register("block_of_nethronite",
+            () -> new Block(BlockBehaviour.Properties.of().strength(5.0f, 6.0f).sound(SoundType.NETHERITE_BLOCK).requiresCorrectToolForDrops()));
 
     public static void register(IEventBus bus) {
         BLOCKS.register(bus);

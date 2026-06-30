@@ -48,7 +48,7 @@ public class OMTConfig {
         "omtreborn:ammo_bullet", "omtreborn:ammo_blazing_clay",
         "omtreborn:ammo_ferro_slug", "omtreborn:ammo_grenade", "omtreborn:ammo_rocket",
         "omtreborn:throwable_bullet", "omtreborn:throwable_grenade",
-        "minecraft:potato"
+        "minecraft:potato", "minecraft:poisonous_potato"
     };
 
     @SuppressWarnings("deprecation")
@@ -203,17 +203,17 @@ public class OMTConfig {
             turretWarningDistance = builder.comment("Extra blocks added to turret range for warning distance").defineInRange("turretWarningDistance", 5, 0, Integer.MAX_VALUE);
 
             //                                        en    range  minR  fr  dmg    pw    acc  sim  dmpAmp  frUp  rngUp accUp  effUp  rcyNeg rcyAdd
-            disposable_turret    = new TurretSetting(builder, "Disposable Turret",   true,  10, 0,  25,  1,      2, 20.0, 4, 0.05, 0.1, 2, 0.20, 0.08, 0.10, 0.05);
-            potato_cannon_turret = new TurretSetting(builder, "Potato Cannon Turret",true,  12, 0,  20,  1,     10, 20.0, 4, 0.05, 0.1, 2, 0.20, 0.08, 0.10, 0.05);
-            machine_gun_turret   = new TurretSetting(builder, "Machine Gun Turret",  true,  18, 0,  10,  3,    100, 10.0, 4, 0.06, 0.1, 2, 0.20, 0.08, 0.10, 0.05);
-            incendiary_turret    = new TurretSetting(builder, "Incendiary Turret",   true,  18, 4,  27,  2,   1200, 23.0, 4, 0.05, 0.1, 2, 0.20, 0.08, 0.10, 0.05);
-            grenade_turret       = new TurretSetting(builder, "Grenade Turret",      true,  18, 4,  40,  5,    500, 23.0, 3, 0.08, 0.1, 2, 0.20, 0.08, 0.10, 0.05);
+            disposable_turret    = new TurretSetting(builder, "Disposable Turret",   true,  10, 1,  25,  1,      2, 20.0, 4, 0.05, 0.1, 2, 0.20, 0.08, 0.10, 0.05);
+            potato_cannon_turret = new TurretSetting(builder, "Potato Cannon Turret",true,  12, 1,  20,  1,     10, 20.0, 4, 0.05, 0.1, 2, 0.20, 0.08, 0.10, 0.05);
+            machine_gun_turret   = new TurretSetting(builder, "Machine Gun Turret",  true,  18, 1,  10,  3,    100, 10.0, 4, 0.06, 0.1, 2, 0.20, 0.08, 0.10, 0.05);
+            incendiary_turret    = new TurretSetting(builder, "Incendiary Turret",   true,  18, 4,  38,  2,   1200, 26.5, 4, 0.05, 0.1, 2, 0.20, 0.08, 0.10, 0.05);
+            grenade_turret       = new TurretSetting(builder, "Grenade Turret",      true,  18, 4,  40,  5,    500, 26.5, 3, 0.08, 0.1, 2, 0.20, 0.08, 0.10, 0.05);
             relativistic_turret  = new TurretSetting(builder, "Relativistic Turret", true,  12, 2,  40,  0,   7500,  0.0, 4, 0.00, 0.1, 2, 0.00, 0.08, 0.10, 0.05);
-            rocket_turret        = new TurretSetting(builder, "Rocket Turret",       true,  30, 5,  30,  8,   5000, 10.0, 3, 0.08, 0.1, 2, 0.20, 0.08, 0.10, 0.05);
+            rocket_turret        = new TurretSetting(builder, "Rocket Turret",       true,  30, 5,  42,  8,   5000, 10.0, 3, 0.08, 0.1, 2, 0.20, 0.08, 0.10, 0.05);
             teleporter_turret    = new TurretSetting(builder, "Teleporter Turret",   true,  20, 4, 100,  0,  30000,  0.0, 1, 0.00, 0.1, 2, 0.20, 0.08, 0.10, 0.05);
-            laser_turret         = new TurretSetting(builder, "Laser Turret",        true,  25, 0,   9,  4,   2500,  5.0, 4, 0.06, 0.125, 2, 0.20, 0.08, 0.10, 0.05);
-            railgun_turret       = new TurretSetting(builder, "Railgun Turret",      true,  30, 0,  90, 30,  30000,  0.0, 2, 0.10, 0.2, 2, 0.20, 0.08, 0.10, 0.05);
-            plasma_turret        = new TurretSetting(builder, "Plasma Turret",       true,  20, 0,  40, 10,  16000,  0.0, 1, 0.10, 0.2, 1, 0.20, 0.08, 0.10, 0.05);
+            laser_turret         = new TurretSetting(builder, "Laser Turret",        true,  25, 1,   9,  4,   2500,  5.0, 4, 0.06, 0.125, 2, 0.20, 0.08, 0.10, 0.05);
+            railgun_turret       = new TurretSetting(builder, "Railgun Turret",      true,  30, 4,  90, 30,  30000,  0.0, 2, 0.10, 0.2, 2, 0.20, 0.08, 0.10, 0.05);
+            plasma_turret        = new TurretSetting(builder, "Plasma Turret",       true,  20, 1,  40, 10,  16000,  0.0, 1, 0.10, 0.2, 1, 0.20, 0.08, 0.10, 0.05);
 
             builder.pop();
         }

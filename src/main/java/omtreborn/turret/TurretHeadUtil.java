@@ -94,11 +94,10 @@ public class TurretHeadUtil {
     }
 
     public static float getAimPitch(LivingEntity target, BlockPos pos) {
-        double dX = (target.getX() - 0.5) - (pos.getX() + 0.5);
-        double dY = (target.getY() + 0.5) - (pos.getY() - 0.5);
-        double dZ = (target.getZ() - 0.5) - (pos.getZ() + 0.5);
-        // Angle from horizontal: 0° = level, positive = target above, negative = target below
-        return (float) Math.toDegrees(Math.atan2(dY, Math.sqrt(dZ*dZ + dX*dX)));
+        double dX = target.getX() - (pos.getX() + 0.5);
+        double dY = target.getEyeY() - (pos.getY() + 1.0);
+        double dZ = target.getZ() - (pos.getZ() + 0.5);
+        return (float) Math.toDegrees(Math.atan2(dY, Math.sqrt(dX * dX + dZ * dZ)));
     }
 
     // --- Upgrade helpers ---

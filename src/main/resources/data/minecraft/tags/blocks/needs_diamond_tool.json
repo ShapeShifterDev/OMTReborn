@@ -2,6 +2,7 @@
   "values": [
     "omtreborn:laser_turret",
     "omtreborn:rail_gun_turret",
-    "omtreborn:plasma_turret"
+    "omtreborn:plasma_turret",
+    "omtreborn:block_of_nethronite"
   ]
 }

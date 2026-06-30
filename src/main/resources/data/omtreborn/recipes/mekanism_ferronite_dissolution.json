@@ -1,0 +1,24 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [{"type": "forge:mod_loaded", "modid": "mekanism"}],
+      "recipe": {
+        "type": "mekanism:dissolution",
+        "itemInput": {
+          "ingredient": {"tag": "forge:ores/ferronite"}
+        },
+        "chemicalInput": {
+          "amount": 1,
+          "chemicalType": "gas",
+          "chemical": "mekanism:sulfuric_acid"
+        },
+        "output": {
+          "amount": 1000,
+          "chemicalType": "slurry",
+          "chemical": "mekanism:dirty_ferronite_slurry"
+        }
+      }
+    }
+  ]
+}

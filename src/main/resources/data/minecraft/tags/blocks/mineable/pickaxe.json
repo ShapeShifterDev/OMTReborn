@@ -1,6 +1,10 @@
 {
   "values": [
-    "omtreborn:turret_base",
+    "omtreborn:turret_base_tier_1",
+    "omtreborn:turret_base_tier_2",
+    "omtreborn:turret_base_tier_3",
+    "omtreborn:turret_base_tier_4",
+    "omtreborn:turret_base_tier_5",
     "omtreborn:disposable_item_turret",
     "omtreborn:potato_cannon_turret",
     "omtreborn:machine_gun_turret",
@@ -14,6 +18,8 @@
     "omtreborn:plasma_turret",
     "omtreborn:ferronite_ore",
     "omtreborn:deepslate_ferronite_ore",
-    "omtreborn:block_of_ferronite"
+    "omtreborn:block_of_ferronite",
+    "omtreborn:block_of_raw_ferronite",
+    "omtreborn:block_of_nethronite"
   ]
 }

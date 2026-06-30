@@ -1,6 +1,10 @@
 {
   "values": [
-    "omtreborn:turret_base",
+    "omtreborn:turret_base_tier_1",
+    "omtreborn:turret_base_tier_2",
+    "omtreborn:turret_base_tier_3",
+    "omtreborn:turret_base_tier_4",
+    "omtreborn:turret_base_tier_5",
     "omtreborn:disposable_item_turret",
     "omtreborn:potato_cannon_turret"
   ]

@@ -106,7 +106,7 @@ public class RelativisticTurretBlockEntity extends TurretHeadBlockEntity {
                     pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
                     20, range, range, range, 0.5);
         }
-        float amplitude = Math.min(1.0f, be.getLaunchSoundVolume()) * OMTConfig.TURRETS.turretSoundVolume.get().floatValue();
+        float amplitude = Math.min(1.15f, be.getLaunchSoundVolume()) * OMTConfig.TURRETS.turretSoundVolume.get().floatValue();
         playTurretSoundWithAttenuation(level, pos, be.getLaunchSoundEffect(), be.getLaunchSoundMaxRange(), amplitude);
         be.ticks = 0;
     }

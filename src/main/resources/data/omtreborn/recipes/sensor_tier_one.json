@@ -4,7 +4,7 @@
   "key": {
     "G": {"tag": "forge:glass"},
     "F": {"item": "omtreborn:ferronite_ingot"},
-    "L": {"tag": "minecraft:logs"}
+    "L": {"tag": "minecraft:wooden_slabs"}
   },
   "result": {"item": "omtreborn:sensor_tier_one"}
 }

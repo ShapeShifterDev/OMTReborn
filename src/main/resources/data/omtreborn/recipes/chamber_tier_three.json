@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": ["DD ", "CF ", "DD "],
   "key": {
-    "D": {"item": "minecraft:deepslate"},
+    "D": {"item": "minecraft:cobbled_deepslate"},
     "C": {"item": "omtreborn:ferronite_coil"},
     "F": {"item": "omtreborn:ferronite_ingot"}
   },

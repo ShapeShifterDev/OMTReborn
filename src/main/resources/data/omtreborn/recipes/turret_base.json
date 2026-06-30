@@ -6,5 +6,5 @@
     "C": {"item": "minecraft:cobblestone"},
     "F": {"item": "minecraft:furnace"}
   },
-  "result": {"item": "omtreborn:turret_base"}
+  "result": {"item": "omtreborn:turret_base_tier_1"}
 }

@@ -10,6 +10,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
+import omtreborn.blocks.BlockTurretBase;
 import omtreborn.blocks.turretheads.BlockAbstractTurretHead;
 import omtreborn.config.OMTConfig;
 import omtreborn.init.ModEntities;
@@ -21,7 +22,7 @@ public class PlasmaProjectile extends TurretProjectile {
 
     public PlasmaProjectile(EntityType<? extends PlasmaProjectile> type, Level level) {
         super(type, level);
-        this.gravity = 0.001f;
+        this.gravity = 0.0f;
     }
 
     public PlasmaProjectile(Level level, TurretBaseBlockEntity base) {
@@ -32,9 +33,21 @@ public class PlasmaProjectile extends TurretProjectile {
     @Override
     public void tick() {
         super.tick();
-        if (!level().isClientSide && tickCount > 30 && !isRemoved()) {
-            discard();
+        if (level().isClientSide || isRemoved()) return;
+
+        // Proximity detonation: fast projectiles can overshoot mobs when a non-solid
+        // block (e.g. fence) truncates the entity-scan endpoint in getHitResultOnMoveVector.
+        // This catches entities within the plasma's area after each movement tick.
+        AABB nearby = getBoundingBox().inflate(0.5);
+        for (LivingEntity entity : level().getEntitiesOfClass(LivingEntity.class, nearby)) {
+            if (entity instanceof Player player) {
+                if (canDamagePlayer(player)) { explode(); return; }
+            } else if (canDamageEntity(entity)) {
+                explode(); return;
+            }
         }
+
+        if (tickCount > 30) discard();
     }
 
     private void explode() {
@@ -71,6 +84,7 @@ public class PlasmaProjectile extends TurretProjectile {
     @Override
     public void onHitBlock(BlockState block, BlockPos pos) {
         if (block.getBlock() instanceof BlockAbstractTurretHead) return;
+        if (block.getBlock() instanceof BlockTurretBase) return;
         if (!block.isSolid()) return;
         if (!level().isClientSide) explode();
     }

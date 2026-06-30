@@ -156,13 +156,20 @@ public class TurretBaseScreen extends AbstractContainerScreen<TurretBaseMenu> {
         int stored = base.getEnergyStorage().getEnergyStored();
         int cap = base.getEnergyStorage().getMaxEnergyStored();
 
+        // Truncate owner name so it doesn't bleed into the right column (starts at x=92)
+        String ownerPrefix = "Owner: ";
+        int nameMaxWidth = 90 - 8 - font.width(ownerPrefix);
+        String displayName = font.width(ownerName) <= nameMaxWidth
+                ? ownerName
+                : font.plainSubstrByWidth(ownerName, nameMaxWidth - font.width("...")) + "...";
+
         // Left column: ownership / combat stats
-        guiGraphics.drawString(font, "Owner: " + ownerName, 8, 75, 0xFFFFFF, false);
+        guiGraphics.drawString(font, ownerPrefix + displayName, 8, 75, 0xFFFFFF, false);
         guiGraphics.drawString(font, "Kills: " + base.getKills() + "  PK: " + base.getPlayerKills(), 8, 87, 0xFFFFFF, false);
 
         // Right column: operational stats
         guiGraphics.drawString(font, "Range: " + base.getRange() + "/" + base.getMaxRange(), 92, 75, 0xFFFFFF, false);
-        guiGraphics.drawString(font, stored + "/" + cap + " RF", 92, 87, 0x00AAFF, false);
+        guiGraphics.drawString(font, formatRF(stored, cap), 92, 87, 0x00AAFF, false);
 
         // Fuel label for tier 1
         if (base.getTier() == 1) {
@@ -170,6 +177,22 @@ public class TurretBaseScreen extends AbstractContainerScreen<TurretBaseMenu> {
         }
 
         guiGraphics.drawString(font, playerInventoryTitle, inventoryLabelX, inventoryLabelY, 0x404040, false);
+    }
+
+    private String formatRF(int stored, int cap) {
+        return formatRFValue(stored, cap) + "/" + formatRFValue(cap, cap) + " RF";
+    }
+
+    private String formatRFValue(int value, int cap) {
+        if (cap < 1_000) {
+            return String.valueOf(value);
+        } else if (cap < 1_000_000) {
+            return (value / 1000) + "K";
+        } else {
+            String s = String.format("%.3f", value / 1_000_000.0);
+            s = s.replaceAll("0+$", "").replaceAll("\\.$", "");
+            return s + "M";
+        }
     }
 
     public void onServerSync() {

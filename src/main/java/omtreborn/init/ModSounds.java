@@ -41,6 +41,7 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> ROCKET_LAUNCH = register("rocket");
     public static final RegistryObject<SoundEvent> TELEPORT_LAUNCH = register("teleport");
     public static final RegistryObject<SoundEvent> AMPED = register("amped");
+    public static final RegistryObject<SoundEvent> PLASMA_TURRET_FIRE = registerFixed("plasma_turret_fire", 64);
     public static final RegistryObject<SoundEvent> LASER_TURRET_FIRE = registerFixed("laser_turret_fire", 64);
     public static final RegistryObject<SoundEvent> RAILGUN_TURRET_FIRE = registerFixed("railgun_turret_fire", 96);
     public static final RegistryObject<SoundEvent> TELEPORTER_TURRET_ACTIVATION = registerFixed("teleporter_turret_activation", 48);

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": ["DDG", "SS ", "DDG"],
   "key": {
-    "D": {"item": "minecraft:deepslate"},
+    "D": {"item": "minecraft:cobbled_deepslate"},
     "G": {"item": "minecraft:gold_ingot"},
     "S": {"item": "minecraft:cobbled_deepslate_slab"}
   },

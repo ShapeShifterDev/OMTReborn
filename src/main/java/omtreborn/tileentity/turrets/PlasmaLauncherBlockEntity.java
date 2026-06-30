@@ -26,7 +26,7 @@ public class PlasmaLauncherBlockEntity extends ProjectileTurretBlockEntity {
 
     @Override
     public SoundEvent getLaunchSoundEffect() {
-        return ModSounds.PLASMA_LAUNCH.get();
+        return ModSounds.PLASMA_TURRET_FIRE.get();
     }
 
     @Override
@@ -36,10 +36,13 @@ public class PlasmaLauncherBlockEntity extends ProjectileTurretBlockEntity {
     public boolean requiresSpecificAmmo() { return false; }
 
     @Override
-    protected float getLaunchSoundVolume() { return 4.0f; }
+    protected float getLaunchSoundVolume() { return 0.65f; }
 
     @Override
-    public float getProjectileGravity() { return 0.01f; }
+    protected float getLaunchSoundMaxRange() { return 64.0f; }
+
+    @Override
+    public float getProjectileGravity() { return 0.0f; }
 
     @Override
     public TurretProjectile createProjectile(Level level, Entity target, ItemStack ammo) {

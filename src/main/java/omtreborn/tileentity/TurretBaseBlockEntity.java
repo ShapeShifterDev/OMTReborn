@@ -14,6 +14,7 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.ForgeHooks;
@@ -85,7 +86,7 @@ public class TurretBaseBlockEntity extends OMLTrustedMachineBlockEntity implemen
     }
 
     private static int capacityForState(BlockState state) {
-        int tier = state.hasProperty(BlockTurretBase.TIER) ? state.getValue(BlockTurretBase.TIER) : 1;
+        int tier = (state.getBlock() instanceof BlockTurretBase b) ? b.getTier() : 1;
         return switch (tier) {
             case 2 -> OMTConfig.BASES.baseTierTwo.baseMaxCharge.get();
             case 3 -> OMTConfig.BASES.baseTierThree.baseMaxCharge.get();
@@ -96,7 +97,7 @@ public class TurretBaseBlockEntity extends OMLTrustedMachineBlockEntity implemen
     }
 
     private static int ioForState(BlockState state) {
-        int tier = state.hasProperty(BlockTurretBase.TIER) ? state.getValue(BlockTurretBase.TIER) : 1;
+        int tier = (state.getBlock() instanceof BlockTurretBase b) ? b.getTier() : 1;
         return switch (tier) {
             case 2 -> OMTConfig.BASES.baseTierTwo.baseMaxIo.get();
             case 3 -> OMTConfig.BASES.baseTierThree.baseMaxIo.get();
@@ -136,8 +137,8 @@ public class TurretBaseBlockEntity extends OMLTrustedMachineBlockEntity implemen
     }
 
     public int getTier() {
-        BlockState state = getBlockState();
-        return state.hasProperty(BlockTurretBase.TIER) ? state.getValue(BlockTurretBase.TIER) : 1;
+        Block block = getBlockState().getBlock();
+        return (block instanceof BlockTurretBase b) ? b.getTier() : 1;
     }
 
     public ItemStackHandler getFuelInventory() { return fuelInventory; }

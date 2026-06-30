@@ -12,6 +12,7 @@ import omtreborn.entity.projectiles.PotatoProjectile;
 import omtreborn.entity.projectiles.TurretProjectile;
 import omtreborn.init.ModBlockEntities;
 import omtreborn.init.ModSounds;
+import omtreborn.turret.TurretHeadUtil;
 import omtreborn.turret.TurretType;
 
 public class PotatoCannonTurretBlockEntity extends ProjectileTurretBlockEntity {
@@ -38,6 +39,15 @@ public class PotatoCannonTurretBlockEntity extends ProjectileTurretBlockEntity {
 
     @Override
     public ItemStack getAmmo() { return new ItemStack(Items.POTATO); }
+
+    @Override
+    protected ItemStack getAmmoStack() {
+        if (!OMTConfig.TURRETS.doTurretsNeedAmmo.get()) return ItemStack.EMPTY;
+        // Try regular potato first, then poisonous potato (both are valid ammo)
+        ItemStack result = TurretHeadUtil.deductItemStackFromInventories(new ItemStack(Items.POTATO), base, this);
+        if (!result.isEmpty()) return result;
+        return TurretHeadUtil.deductItemStackFromInventories(new ItemStack(Items.POISONOUS_POTATO), base, this);
+    }
 
     @Override
     public float getProjectileGravity() { return 0.03f; }

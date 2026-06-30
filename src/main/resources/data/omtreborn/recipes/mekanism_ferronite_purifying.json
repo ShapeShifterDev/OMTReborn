@@ -1,0 +1,23 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [{"type": "forge:mod_loaded", "modid": "mekanism"}],
+      "recipe": {
+        "type": "mekanism:purifying",
+        "itemInput": {
+          "ingredient": {"tag": "forge:raw_materials/ferronite"}
+        },
+        "chemicalInput": {
+          "amount": 1,
+          "chemicalType": "gas",
+          "chemical": "mekanism:oxygen"
+        },
+        "output": {
+          "id": "mekanism:ferronite_clump",
+          "count": 3
+        }
+      }
+    }
+  ]
+}
